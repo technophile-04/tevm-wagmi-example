@@ -20,6 +20,7 @@ export const config = createConfig({
   transports: {
     [hardhat.id]: tevmTransport(memoryClient),
   },
+  cacheTime: 0,
 });
 
 declare module "wagmi" {
