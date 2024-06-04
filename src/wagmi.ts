@@ -3,11 +3,16 @@ import { hardhat } from "wagmi/chains";
 import { coinbaseWallet, injected, walletConnect } from "wagmi/connectors";
 
 import { createMemoryClient, tevmTransport } from "tevm";
-import { tevmDefault } from "tevm/common";
+import { createCommon, tevmDefault } from "tevm/common";
 
-const memoryClient = createMemoryClient({
-  common: { ...tevmDefault, id: 31337 },
+const customCommon = createCommon({
+  ...tevmDefault,
+  id: hardhat.id,
+  loggingLevel: "warn",
+  eips: [],
+  hardfork: "cancun",
 });
+const memoryClient = createMemoryClient({ common: customCommon });
 
 export const config = createConfig({
   chains: [hardhat],
