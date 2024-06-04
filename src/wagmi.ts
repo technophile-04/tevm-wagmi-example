@@ -12,7 +12,7 @@ const customCommon = createCommon({
   eips: [],
   hardfork: "cancun",
 });
-const memoryClient = createMemoryClient({ common: customCommon });
+export const memoryClient = createMemoryClient({ common: customCommon });
 
 export const config = createConfig({
   chains: [hardhat],
