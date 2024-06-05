@@ -1,6 +1,6 @@
 "use client";
 
-import { config } from "@/wagmi";
+import { config, memoryClient } from "@/wagmi";
 import { createMemoryClient } from "tevm";
 import { tevmDefault } from "tevm/common";
 import { parseEther } from "viem";
@@ -9,10 +9,6 @@ import { getBlockNumber } from "wagmi/actions";
 
 const NUM_OF_ETH = "1";
 const FAUCET_ADDRESS = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266";
-
-const memoryClient = createMemoryClient({
-  common: { ...tevmDefault, id: 31337 },
-});
 
 function App() {
   const account = useAccount();
