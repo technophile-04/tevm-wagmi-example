@@ -13,7 +13,7 @@
     "next": "13.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tevm": "^1.1.0-next.69",
+    "tevm": "^1.1.0-next.78",
     "viem": "latest",
     "wagmi": "latest"
   },
