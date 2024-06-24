@@ -1,8 +1,6 @@
 "use client";
 
 import { config, memoryClient } from "@/wagmi";
-import { createMemoryClient } from "tevm";
-import { tevmDefault } from "tevm/common";
 import { parseEther } from "viem";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { getBlockNumber } from "wagmi/actions";
